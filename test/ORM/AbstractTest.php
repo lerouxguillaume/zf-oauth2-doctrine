@@ -22,11 +22,11 @@ abstract class AbstractTest extends \Laminas\Test\PHPUnit\Controller\AbstractHtt
         return [[$doctrineAdapter]];
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
     }
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->setApplicationConfig(
             include __DIR__ . '/../asset/orm.config.php'
