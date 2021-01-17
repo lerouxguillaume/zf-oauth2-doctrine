@@ -2,10 +2,10 @@
 
 namespace ZFTest\OAuth2\Doctrine\Listener;
 
-use Zend\EventManager\Event;
-use Zend\EventManager\AbstractListenerAggregate;
-use Zend\EventManager\EventManagerInterface;
-use Zend\Log\Logger;
+use Laminas\EventManager\Event;
+use Laminas\EventManager\AbstractListenerAggregate;
+use Laminas\EventManager\EventManagerInterface;
+use Laminas\Log\Logger;
 use ZF\OAuth2\Doctrine\Adapter\DoctrineAdapter;
 
 class TestEvents extends AbstractListenerAggregate

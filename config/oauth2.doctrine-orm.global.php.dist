@@ -1,7 +1,7 @@
 <?php
 
 /**
- * The user entity is always stored in another namespace than ZF\OAuth2
+ * The user entity is always stored in another namespace than Laminas\ApiTools\OAuth2
  */
 $userEntity = 'ZFTest\OAuth2\Doctrine\Entity\User';
 

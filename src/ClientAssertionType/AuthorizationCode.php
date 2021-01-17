@@ -5,7 +5,7 @@ namespace ZF\OAuth2\Doctrine\ClientAssertionType;
 use OAuth2\RequestInterface;
 use OAuth2\ResponseInterface;
 use OAuth2\ClientAssertionType\ClientAssertionTypeInterface;
-use Zend\Stdlib\ArraySerializableInterface;
+use Laminas\Stdlib\ArraySerializableInterface;
 use ArrayAccess;
 
 /**

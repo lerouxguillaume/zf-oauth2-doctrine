@@ -10,11 +10,11 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Interop\Container\ContainerInterface;
 use Interop\Container\Exception\ContainerException;
 use InvalidArgumentException;
-use Zend\ServiceManager\Exception\ServiceNotFoundException;
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
-use Zend\ServiceManager\Exception\ServiceNotCreatedException;
-use Zend\Config\Config;
+use Laminas\ServiceManager\Exception\ServiceNotFoundException;
+use Laminas\ServiceManager\FactoryInterface;
+use Laminas\ServiceManager\ServiceLocatorInterface;
+use Laminas\ServiceManager\Exception\ServiceNotCreatedException;
+use Laminas\Config\Config;
 use ZF\OAuth2\Doctrine\Mapper\MapperManager;
 
 class DoctrineAdapterFactory implements FactoryInterface
@@ -37,7 +37,7 @@ class DoctrineAdapterFactory implements FactoryInterface
 
     /**
      * @param ServiceLocatorInterface $services
-     * @throws \ZF\OAuth2\Controller\Exception\RuntimeException
+     * @throws \Laminas\ApiTools\OAuth2\Controller\Exception\RuntimeException
      * @return \ZF\OAuth2\Doctrine\Adapter\DoctrineAdapter
      */
     public function createService(ServiceLocatorInterface $services)
@@ -50,7 +50,7 @@ class DoctrineAdapterFactory implements FactoryInterface
      * @param string $objectManagerAlias
      *
      * @return ObjectManager
-     * @throws \Zend\ServiceManager\Exception\ServiceNotCreatedException
+     * @throws \Laminas\ServiceManager\Exception\ServiceNotCreatedException
      * @throws InvalidArgumentException
      */
     protected function loadObjectManager($services, $objectManagerAlias)
@@ -75,7 +75,7 @@ class DoctrineAdapterFactory implements FactoryInterface
      * @param Config $config
      *
      * @return MapperManager
-     * @throws \Zend\ServiceManager\Exception\ServiceNotCreatedException
+     * @throws \Laminas\ServiceManager\Exception\ServiceNotCreatedException
      * @throws InvalidArgumentException
      */
     protected function loadMapperManager($services, Config $config)

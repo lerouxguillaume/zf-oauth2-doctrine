@@ -11,7 +11,7 @@
         <attribute name="table">Client_OAuth2</attribute>
       </orm-attributes>
     </entity>
-    <comment caption="Disconnected User" description="The ZF\OAuth2\Entity\User does not exist and should be replaced with a custom user entity with a client relation to dynamically assoicate them.  This is dynamically mapped and defined in the config." uuid="664daa50-d4a6-4d82-a35f-5eb5e2e8e7ca"/>
+    <comment caption="Disconnected User" description="The Laminas\ApiTools\OAuth2\Entity\User does not exist and should be replaced with a custom user entity with a client relation to dynamically assoicate them.  This is dynamically mapped and defined in the config." uuid="664daa50-d4a6-4d82-a35f-5eb5e2e8e7ca"/>
     <comment caption="Unique clientId" description="A unique index for clientId is required and added dynamically through the metadata subscriber.  It is not in the schema to allow for custom naming strategies." uuid="5e19d4fc-7756-4a50-9d4d-91a05aeabac2"/>
     <comment caption="Scope Fixture" description="The Scope entity is intended for use as a fixture.  You must manually assign an id to each scope." uuid="a24412f2-ffc8-48f6-bf21-a1843f47865d"/>
     <comment caption="Unique Scope name" description="A unique index for name is required and added dynamically through the metadata subscriber.  It is not in the schema to allow for custom naming strategies." uuid="df548641-cc75-4355-89a3-9e01d81b9d41"/>

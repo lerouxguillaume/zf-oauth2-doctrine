@@ -14,19 +14,19 @@ use OAuth2\Storage\ScopeInterface;
 use OAuth2\Storage\PublicKeyInterface;
 use DoctrineModule\Persistence\ObjectManagerAwareInterface;
 use Doctrine\Common\Collections\ArrayCollection;
-use Zend\Crypt\Password\Bcrypt;
-use Zend\Mvc\MvcEvent;
-use Zend\ServiceManager\ServiceLocatorInterface;
+use Laminas\Crypt\Password\Bcrypt;
+use Laminas\Mvc\MvcEvent;
+use Laminas\ServiceManager\ServiceLocatorInterface;
 use ZF\OAuth2\Doctrine\EventListener\DynamicMappingSubscriber;
 use DoctrineModule\Persistence\ProvidesObjectManager as ProvidesObjectManagerTrait;
 use ZF\OAuth2\Doctrine\Mapper\MapperManager;
 use Doctrine\ORM\Mapping\Driver\XmlDriver;
-use Zend\Config\Config;
+use Laminas\Config\Config;
 use Exception;
 use DateTime;
 
-use Zend\EventManager\EventManagerAwareInterface;
-use Zend\EventManager\EventManagerAwareTrait;
+use Laminas\EventManager\EventManagerAwareInterface;
+use Laminas\EventManager\EventManagerAwareTrait;
 
 /**
  * Doctrine storage for OAuth2

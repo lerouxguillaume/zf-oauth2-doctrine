@@ -3,12 +3,12 @@
 namespace ZF\OAuth2\Doctrine;
 
 use Interop\Container\ContainerInterface;
-use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
-use Zend\ModuleManager\Feature\ConfigProviderInterface;
-use Zend\Config\Config;
-use Zend\Mvc\MvcEvent;
-use Zend\Loader\StandardAutoloader;
-use Zend\ServiceManager\ServiceLocatorInterface;
+use Laminas\ModuleManager\Feature\AutoloaderProviderInterface;
+use Laminas\ModuleManager\Feature\ConfigProviderInterface;
+use Laminas\Config\Config;
+use Laminas\Mvc\MvcEvent;
+use Laminas\Loader\StandardAutoloader;
+use Laminas\ServiceManager\ServiceLocatorInterface;
 use ZF\OAuth2\Doctrine\Adapter\DoctrineAdapterFactory;
 
 class Module implements
@@ -40,8 +40,8 @@ class Module implements
 
         return [
             'service_manager' => $provider->getDependencyConfig(),
-            'zf-apigility-doctrine-query-create-filter' => $provider->getQueryCreateFilterConfig(),
-            'zf-apigility-doctrine-query-provider' => $provider->getQueryProviderConfig(),
+            'api-tools-doctrine-query-create-filter' => $provider->getQueryCreateFilterConfig(),
+            'api-tools-doctrine-query-provider' => $provider->getQueryProviderConfig(),
         ];
     }
 

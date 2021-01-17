@@ -2,7 +2,7 @@
 
 namespace ZF\OAuth2\Doctrine;
 
-use Zend\ServiceManager\Factory\InvokableFactory;
+use Laminas\ServiceManager\Factory\InvokableFactory;
 
 class ConfigProvider
 {
@@ -15,8 +15,8 @@ class ConfigProvider
     {
         return [
             'dependencies' => $this->getDependencyConfig(),
-            'zf-apigility-doctrine-query-create-filter' => $this->getQueryCreateFilterConfig(),
-            'zf-apigility-doctrine-query-provider' => $this->getQueryProviderConfig(),
+            'api-tools-doctrine-query-create-filter' => $this->getQueryCreateFilterConfig(),
+            'api-tools-doctrine-query-provider' => $this->getQueryProviderConfig(),
         ];
     }
 

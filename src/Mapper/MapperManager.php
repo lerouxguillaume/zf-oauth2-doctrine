@@ -4,8 +4,8 @@ namespace ZF\OAuth2\Doctrine\Mapper;
 
 use DoctrineModule\Persistence\ObjectManagerAwareInterface;
 use DoctrineModule\Persistence\ProvidesObjectManager as ProvidesObjectManagerTrait;
-use Zend\Config\Config;
-use Zend\ServiceManager\Exception;
+use Laminas\Config\Config;
+use Laminas\ServiceManager\Exception;
 
 class MapperManager implements
     ObjectManagerAwareInterface

@@ -10,40 +10,27 @@ env:
   global:
     - COMPOSER_ARGS="--no-interaction"
 
-matrix: 
+matrix:
   fast_finish: true
   include:
-    - php: 7.1
-      env:
-        - EXECUTE_COVERAGE=true
-        - EXECUTE_CS_CHECK=true 
-        - DEPS=lowest
-    - php: 7.1
-      env:
-        - DEPS=latest
-    - php: 7.2
     - php: 7.3
+    - php: 8.0
 
 notifications:
-  irc: "irc.freenode.org#apigility-dev"
   email: false
 
 before_install:
-  - if [[ $EXECUTE_COVERAGE != 'true' ]]; then phpenv config-rm xdebug.ini || return 0 ; fi
   - composer self-update
   - chmod -R +rwX test/asset/data
 
 install:
-  - if [[ $DEPS == 'latest' ]]; then travis_retry composer update $COMPOSER_ARGS ; fi
-  - if [[ $DEPS == 'lowest' ]]; then travis_retry composer update --prefer-lowest --prefer-stable $COMPOSER_ARGS ; fi
   - travis_retry composer install $COMPOSER_ARGS
   - composer show --installed
 
 script:
   - mkdir -p build/logs
-  - if [[ EXECUTE_COVERAGE == 'true' ]]; then ./vendor/bin/phpunit --coverage-clover build/logs/clover.xml ; fi
-  - if [[ EXECUTE_COVERAGE != 'true' ]]; then ./vendor/bin/phpunit ; fi
-  - if [[ $EXECUTE_CS_CHECK == 'true' ]]; then ./vendor/bin/phpcs; fi
+  - ./vendor/bin/phpunit --coverage-clover build/logs/clover.xml
+  - ./vendor/bin/phpcs
 
 after_script:
   - php vendor/bin/coveralls
