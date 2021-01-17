@@ -5,7 +5,7 @@
     "keywords": [
         "oauth2",
         "doctrine",
-        "apigility"
+        "laminas-api-tools"
     ],
     "require": {
         "php": "^7.3|~8.0",
