@@ -8,8 +8,6 @@ cache:
 
 env:
   - XDEBUG_MODE=coverage
-  global:
-    - COMPOSER_ARGS="--no-interaction"
 
 matrix:
   fast_finish: true
@@ -25,7 +23,7 @@ before_install:
   - chmod -R +rwX test/asset/data
 
 install:
-  - travis_retry composer install $COMPOSER_ARGS
+  - travis_retry composer install
   - composer show --installed
 
 script:
