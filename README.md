@@ -1,4 +1,4 @@
-OAuth2 Doctrine ORM Adapter for Apigility
+OAuth2 Doctrine ORM Adapter for Apigility/Laminas API Tools
 =========================================
 
 > This is a Fork of https://github.com/API-Skeletons/zf-oauth2-doctrine
