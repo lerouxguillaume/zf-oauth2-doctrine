@@ -9,11 +9,10 @@ cache:
 env:
   - XDEBUG_MODE=coverage
 
-matrix:
-  fast_finish: true
-  include:
-    - php: 7.3
-    - php: 8.0
+php:
+  - 7.3
+  - 7.4
+  - 8.0
 
 notifications:
   email: false
@@ -23,7 +22,13 @@ before_install:
   - chmod -R +rwX test/asset/data
 
 install:
-  - travis_retry composer install
+  - |
+    if [ $(phpenv version-name) != '8.0' ]; then
+      travis_retry composer install --prefer-source --no-interaction
+    fi
+    if [ $(phpenv version-name) == '8.0' ]; then
+      travis_retry composer install --prefer-source --no-interaction --ignore-platform-req=php
+    fi
   - composer show --installed
 
 script:
