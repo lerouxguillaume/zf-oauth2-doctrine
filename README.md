@@ -17,6 +17,7 @@ Versions
 * 1.x series is for PHP 5.5 to 7.0.
 * 2.x series is for PHP 7.1 onward.
 * 3.x series is for PHP 7.1 onward and uses bigint instead of integer, scope fixture, and bcrypt cost of 10.
+* 4.x series is for PHP 7.3|~8.0 with laminas support.
 
 ![Entity Relationship Diagram](https://raw.githubusercontent.com/samsonasik/zf-oauth2-doctrine/master/media/oauth2-doctrine-erd.png)
 Entity Relationship Diagram created with [Skipper](https://skipper18.com)
