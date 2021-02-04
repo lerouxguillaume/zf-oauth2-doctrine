@@ -28,10 +28,6 @@ class OAuth2ServerInitializer implements InitializerInterface
      */
     public function initialize($instance, ServiceLocatorInterface $serviceLocator)
     {
-        if ($serviceLocator instanceof AbstractPluginManager) {
-            $serviceLocator = $serviceLocator->getServiceLocator() ?: $serviceLocator;
-        }
-
         return $this->internalInitialize($serviceLocator, $instance);
     }
 
